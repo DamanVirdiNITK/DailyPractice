@@ -1,0 +1,29 @@
+####1st Method
+Brute Force
+Find all the triplets and then max of all
+Time Complexity O(n3)
+Space Complexity O(1)
+
+
+####2nd Method
+SORT the array/list. Two possibilites of MAX product is : all 3 greatest positive or 2 least and one max positive
+
+class Solution:
+    def maximumProduct(self, nums: List[int]) -> int:
+        n = len(nums)
+        nums.sort()
+        return max(nums[0]*nums[1]*nums[n-1] , nums[n-1]*nums[n-2]*nums[n-3] )
+        
+Time Complexity O(nlogn)   (for Sorting)
+Space Complexity O(logn)   (for Sorting)
+
+
+###3rd Methods
+Instead of sorting. Find all 2 smallest and 3 largest numbers in SINGLE SCAN and then find max as in prev method
+
+##In progress
+
+        
+        
+  
+        
