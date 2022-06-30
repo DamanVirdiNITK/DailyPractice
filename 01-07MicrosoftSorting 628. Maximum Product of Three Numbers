@@ -10,15 +10,23 @@ SORT the array/list. Two possibilites of MAX product is : all 3 greatest positiv
 
 class Solution:
     def maximumProduct(self, nums: List[int]) -> int:
-        n = len(nums)
         nums.sort()
-        return max(nums[0]*nums[1]*nums[n-1] , nums[n-1]*nums[n-2]*nums[n-3] )
+        return max(nums[0]*nums[1]*nums[-1] , nums[-1]*nums[-2]*nums[-3] )
         
 Time Complexity O(nlogn)   (for Sorting)
 Space Complexity O(logn)   (for Sorting)
 
 
-###3rd Methods
+###3rd Method : Instead of sorting. Find all 2 smallest and 3 largest numbers using HEAP and then find max as in prev method
+
+class Solution:
+    def maximumProduct(self, nums: List[int]) -> int:
+        a,b = heapq.nlargest(3,nums) , heapq.nsmallest(2,nums)
+        return max(a[0]*a[1]*a[2], a[0]*b[0]*b[1])
+        
+
+
+###4rd Method
 Instead of sorting. Find all 2 smallest and 3 largest numbers in SINGLE SCAN and then find max as in prev method
 
 ##In progress
