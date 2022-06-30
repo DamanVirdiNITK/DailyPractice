@@ -25,6 +25,10 @@ class Solution:
         return max(a[0]*a[1]*a[2], a[0]*b[0]*b[1])
         
 
+Time Complexity O(n)    =O(nlog3)  (for Sorting)
+Space Complexity ??
+        
+
 
 ###4rd Method
 Instead of sorting. Find all 2 smallest and 3 largest numbers in SINGLE SCAN and then find max as in prev method
