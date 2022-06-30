@@ -1,0 +1,14 @@
+922. Sort Array By Parity II
+class Solution:
+    def sortArrayByParityII(self, nums: List[int]) -> List[int]:
+        odd = [i for i in nums if i%2]
+        even = [i for i in nums if i%2 ==0]
+        result = [0]*len(nums)
+        for i in range(0, len(nums)):
+            if i%2:
+                result[i] = odd[0]
+                odd.pop(0)
+            else:
+                result[i] = even[0]
+                even.pop(0)
+        return result
