@@ -1,0 +1,9 @@
+169. Majority Element
+
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        nums_dict = Counter(nums)
+        for key in nums_dict:
+            if nums_dict[key]> len(nums)/2:
+                return key
+        
