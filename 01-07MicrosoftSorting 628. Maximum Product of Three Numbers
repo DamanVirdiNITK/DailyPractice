@@ -33,6 +33,9 @@ Space Complexity ??
 ###4rd Method
 Instead of sorting. Find all 2 smallest and 3 largest numbers in SINGLE SCAN and then find max as in prev method
 
+
+Time Complexity O(n)   
+Space Complexity O(1)  
 ##In progress
 
         
