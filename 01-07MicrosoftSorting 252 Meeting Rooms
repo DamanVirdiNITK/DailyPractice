@@ -1,0 +1,13 @@
+class Solution:
+    def canAttendMeetings(self, intervals: List[List[int]]) -> bool:
+        s = set()
+        l = []
+        for i in intervals:
+            for j in range(i[0],i[1] ):
+                s.add(j)
+                l.append(j)
+                
+        return len(s)== len(l)
+        
+        
+  ##MemoryLimitExceeded
